@@ -4,14 +4,18 @@
   "description": "[Hacktoberfest](https://hacktoberfest.digitalocean.com/) is a month long virtual festival event to celebrate open source contributions presented by [Digital Ocean](https://www.digitalocean.com/), [Intel](https://hacktoberfest.digitalocean.com/intel.pdf) and [DEV](https://dev.to/). It is the easiest way to get into open source!",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
-  "author": "Decoded_Cipher",
+  "author": "Decodecd_Cipher",
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.12"
   },
   "dependencies": {
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "http-errors": "^1.8.0"
   }
 }
