@@ -10,6 +10,9 @@ This is a leader-board to showcase the code contributions of our fellows during 
 - APIs Used : [GitHub API](https://docs.github.com), [Google Sheets API](https://developers.google.com/sheets/api)
 
 ## 🕊️ Project Contributors
+- [Arjun Krishna](https://github.com/decoded-cipher)
+- [Joyel Johny](https://github.com/JoyelJohny)
 - [Sandra Krishnan](https://github.com/krishnansandra)
 - [Christeena Zachariah](https://github.com/christeenazacharia)
+- [Aravinth S Kumar](https://github.com/aravinthskumar)
 - [Ashima Shajahan](https://github.com/Ashima323)
