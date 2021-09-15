@@ -16,6 +16,8 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
-    "http-errors": "^1.8.0"
+    "googleapis": "^85.0.0",
+    "http-errors": "^1.8.0",
+    "xlsx-rows": "^1.0.0"
   }
 }
