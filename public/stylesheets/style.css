@@ -26,3 +26,13 @@ p {
   background-color: #f7e1e4;
   border-color: #9c4768;
 }
+
+a {
+  text-decoration: none;
+  color: #f7e1e4;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f7e1e4;
+}
