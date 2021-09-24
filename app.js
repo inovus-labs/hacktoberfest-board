@@ -65,7 +65,7 @@ app.engine('hbs', hbs({
 app.use(express.static(__dirname, +'public'));
 
 app.get('/', (req, res) => {
-    console.log(parseData)
+    // console.log(parseData)
     res.render('home', {parseData});
 });
 
