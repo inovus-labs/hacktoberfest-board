@@ -1,5 +1,5 @@
 var express = require('express');
-var request = require('request');
+var axios = require('axios');
 require('dotenv').config()
 var app = express();
 
@@ -50,53 +50,49 @@ async function gsrun(x) {
     const val = data.slice(1);
     const objects = val.map(array => {
         var k = array[0];
-        var l = k.substring(k.lastIndexOf("/") + 1, k.length);
-        array.push(l)
+        var username = k.substring(k.lastIndexOf("/") + 1, k.length);
+
+
+        var config = {
+            method: 'get',
+            url: `https://api.github.com/users/${username}`,
+            headers: {
+                'User-Agent': 'request'
+            }
+        };
+
+        axios(config)
+            .then((response) => {
+                var gh_data = JSON.parse(JSON.stringify(response.data))
+                // console.log(gh_data);
+
+                array.push(response.data.login, response.data.avatar_url + '.png', response.data.public_repos)
+                // console.log(response.data.login, response.data.avatar_url, response.data.public_repos);
+                
+                var updateOptions = {
+                    spreadsheetId: process.env.SPREADSHEET_ID,
+                    range: 'test!B2',
+                    valueInputOption: 'USER_ENTERED',
+                    resource: {
+                        values: objects
+                    }
+                }
+            
+                var res = api.spreadsheets.values.update(updateOptions)
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
         return array
     });
 
     // console.log(objects);
 
-    var updateOptions = {
-        spreadsheetId: process.env.SPREADSHEET_ID,
-        range: 'test!B2',
-        valueInputOption: 'USER_ENTERED',
-        resource: {
-            values: objects
-        }
-    }
-
-    var res = await api.spreadsheets.values.update(updateOptions)
     // console.log(res);
 
     // parseData = JSON.parse(JSON.stringify(objects));
     // console.log(parseData);
 }
-
-
-
-
-
-
-
-
-
-
-
-var options = {
-    url: `https://api.github.com/users/{username}`,
-    headers: {
-        'User-Agent': 'request'
-    }
-};
-
-var callback = (error, response, body) => {
-    if (!error && response.statusCode == 200) {
-        var info = JSON.parse(body);
-        console.log(info);
-    }
-}
-
-request(options, callback);
 
 app.listen(5000);
