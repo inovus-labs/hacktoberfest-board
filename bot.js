@@ -63,7 +63,7 @@ async function gsrun(x) {
 
         axios(config)
             .then((response) => {
-                var gh_data = JSON.parse(JSON.stringify(response.data))
+                // var gh_data = JSON.parse(JSON.stringify(response.data))
                 // console.log(gh_data);
 
                 array.push(response.data.login, response.data.avatar_url + '.png', response.data.public_repos)
