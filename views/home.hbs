@@ -1,0 +1,30 @@
+<center>
+    <div class="row text-center" style="width:86%">
+        <div class="card-body mt-3">
+            <h1 class="card-title">CONTRIBUTION <b>LEADERBOARD</b></h1>
+        </div>
+    </div>
+</center>
+
+<div class="container">
+    <div class="row text-center mx-3 mb-5">
+
+        {{#each parseData}}
+        <div class="col-xl-3 col-sm-6 my-3 px-3">
+            <div class="bg rounded py-5 px-4">
+                <img src="{{this.avatar_url}}" width="120px"
+                    class="rounded-circle mb-3 img-thumbnail">
+                <h6 class="mb-1">{{this.name}}</h6>
+                <h6 class="mb-3"><a target="blank" href="{{this.html_url}}">@{{this.username}}</a></h6>
+
+                <div class="bgm rounded py-4 px-4">
+                    <p>Public Repositories : <b>{{this.public_repos}}</b></p>
+                    <p>Total Commits : <b>1078</b></p>
+                    <p>Total Forks : <b>13</b></p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+body {
+  background: #f7e1e4;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h6, h5 {
+  color: #f7e1e4;
+}
+
+h1 {
+  color: #9c4768;
+}
+
+p {
+  text-align: left;
+  font-size: 14px;
+}
+
+.bg {
+  color: #9c4768;
+  background-color: #9c4768;
+}
+
+.bgm {
+  background-color: #f7e1e4;
+  border-color: #9c4768;
+}
+
+a {
+  text-decoration: none;
+  color: #f7e1e4;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #f7e1e4;
+}
