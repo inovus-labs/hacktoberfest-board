@@ -1,0 +1,37 @@
+body {
+  background: #adadad;
+  background: -webkit-linear-gradient(to right, #000000, #000000);
+  background: linear-gradient(to right, #747474, #747474);
+  min-height: 100vh;
+}
+
+h6{
+color: rgb(247, 247, 247);    
+}
+h1{
+  color: rgb(228, 228, 228);
+}
+
+p{
+  text-align: left;
+  font-size: 12px;
+}
+
+.bg
+{
+  border-style: ridge;
+  border-color: rgb(128, 127, 127);   
+  color: rgb(8, 8, 8);
+  background-color: rgb(5, 5, 5);
+ 
+}
+
+
+
+.bgm
+{
+background-color: #a1a1a1;  
+border-style: ridge;
+  border-color: rgb(63, 63, 63); 
+  
+}
